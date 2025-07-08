@@ -1,6 +1,2 @@
 venv/
-app/model_xgb.joblib
-app/model_lgb.joblib
-app/model_cat.joblib
-app/model_metadata.joblib
 __pycache__/
