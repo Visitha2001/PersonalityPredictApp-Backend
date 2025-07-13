@@ -7,6 +7,14 @@ app = FastAPI(
     version="1.0.0"
 )
 
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*" , "http://localhost:5173/*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
 app.include_router(prediction_router, prefix="/api/v1")
 
 @app.get("/")
