@@ -1,10 +1,16 @@
 from pydantic import BaseModel
+from typing import Optional
 
 class PersonalityInput(BaseModel):
     Time_spent_Alone: float
-    Stage_fear: bool
-    Social_event_attendance: float
-    Going_outside: float
-    Drained_after_socializing: bool
-    Friends_circle_size: float
-    Post_frequency: float
+    Social_event_attendance: int
+    Going_outside: int
+    Friends_circle_size: int
+    Post_frequency: int
+    Stage_fear: str
+    Drained_after_socializing: str
+
+class PersonalityPrediction(BaseModel):
+    prediction: str
+    confidence: float
+    indicators: dict
