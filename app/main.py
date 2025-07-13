@@ -1,5 +1,6 @@
 from fastapi import FastAPI
 from routes.routes import router as prediction_router
+from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI(
     title="Personality Prediction API",
